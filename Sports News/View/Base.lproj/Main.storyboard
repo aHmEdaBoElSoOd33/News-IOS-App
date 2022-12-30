@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sports NewsVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SportsNewsVC" customModule="Sports_News" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WY7-8X-Tb1">
+                                <rect key="frame" x="0.0" y="47" width="428" height="845"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="200" id="dKP-d8-aeV" customClass="NewsCell" customModule="Sports_News" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="428" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dKP-d8-aeV" id="aqo-j2-JP4">
+                                            <rect key="frame" x="0.0" y="0.0" width="428" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V7t-XY-U9B" userLabel="Viewcell">
+                                                    <rect key="frame" x="10" y="5" width="408" height="190"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="breaking-news-blog-1138x658-1" translatesAutoresizingMaskIntoConstraints="NO" id="BWY-4w-0IR">
+                                                            <rect key="frame" x="0.0" y="0.0" width="408" height="142.66666666666666"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eiv-e9-J32">
+                                                            <rect key="frame" x="0.0" y="142.66666666666666" width="408" height="47.333333333333343"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="eiv-e9-J32" secondAttribute="trailing" id="3Hw-5C-Tx1"/>
+                                                        <constraint firstItem="BWY-4w-0IR" firstAttribute="top" secondItem="V7t-XY-U9B" secondAttribute="top" id="6xw-QO-wvd"/>
+                                                        <constraint firstItem="eiv-e9-J32" firstAttribute="leading" secondItem="V7t-XY-U9B" secondAttribute="leading" id="73M-3x-A59"/>
+                                                        <constraint firstAttribute="trailing" secondItem="BWY-4w-0IR" secondAttribute="trailing" id="B0Q-aS-OUl"/>
+                                                        <constraint firstItem="eiv-e9-J32" firstAttribute="top" secondItem="BWY-4w-0IR" secondAttribute="bottom" id="FjP-lc-f0M"/>
+                                                        <constraint firstItem="BWY-4w-0IR" firstAttribute="leading" secondItem="V7t-XY-U9B" secondAttribute="leading" id="TOY-6a-bgv"/>
+                                                        <constraint firstItem="BWY-4w-0IR" firstAttribute="height" secondItem="V7t-XY-U9B" secondAttribute="height" multiplier="0.75" id="UFb-IF-Opc"/>
+                                                        <constraint firstAttribute="bottom" secondItem="eiv-e9-J32" secondAttribute="bottom" id="ccW-7l-Odu"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="V7t-XY-U9B" firstAttribute="top" secondItem="aqo-j2-JP4" secondAttribute="top" constant="5" id="7mR-Nw-0fM"/>
+                                                <constraint firstAttribute="bottom" secondItem="V7t-XY-U9B" secondAttribute="bottom" constant="5" id="e0a-wu-JLq"/>
+                                                <constraint firstItem="V7t-XY-U9B" firstAttribute="leading" secondItem="aqo-j2-JP4" secondAttribute="leading" constant="10" id="qQB-N1-1Pf"/>
+                                                <constraint firstAttribute="trailing" secondItem="V7t-XY-U9B" secondAttribute="trailing" constant="10" id="vus-XG-ng2"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="NewsPoster" destination="BWY-4w-0IR" id="hzF-ME-fu7"/>
+                                            <outlet property="NewsTitle" destination="eiv-e9-J32" id="xe9-x4-3mZ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="D0V-Qh-AOT"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="XkM-i4-uLL"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WY7-8X-Tb1" secondAttribute="bottom" id="cSr-Xz-nlL"/>
+                            <constraint firstItem="WY7-8X-Tb1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wt1-hs-ONI"/>
+                            <constraint firstItem="WY7-8X-Tb1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="xmk-vf-b2H"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WY7-8X-Tb1" secondAttribute="trailing" id="yIU-Du-ucZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="WY7-8X-Tb1" id="AF8-ff-KSa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100.93457943925233" y="4.5356371490280782"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="breaking-news-blog-1138x658-1" width="800" height="480"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
