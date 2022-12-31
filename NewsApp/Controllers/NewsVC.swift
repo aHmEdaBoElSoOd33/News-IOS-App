@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SportsNewsVC: UIViewController {
+class NewsVC: UIViewController {
     //MARK: - IBOutlets
     
     @IBOutlet weak var tableView: UITableView!
@@ -16,28 +16,69 @@ class SportsNewsVC: UIViewController {
     
     //MARK: - Variables
     
+    var url = ""
+    var postNum = 10
+    var categoryTag : Int?
     var newsArray = [Article(title: "" , url: "", urlToImage: "")]
     var postsArray : [Article] = [Article(title: "", url: "", urlToImage: "")]
     var newsApi = NewsApi()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        newsApi.fetchData()
+        
+        Apisetup()
         tableView.delegate=self
         tableView.dataSource=self
         newsApi.delegate=self
+        print(categoryTag!)
         
     }
+    
+
+    //MARK: - Functions
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! WebsiteVC
         let selectedRow = tableView.indexPathForSelectedRow?.row
         vc.websitURL = postsArray[selectedRow!].url
+    }
+      
+    func Apisetup() {
         
+        switch categoryTag {
+        case 0:
+            url = "https://newsapi.org/v2/top-headlines?country=eg&category=business&apiKey=8b37d8a3b30d497fab3c2ba52ad231fa"
+            postNum = 5
+            newsApi.fetchData(url: url)
+        case 1:
+            url = "https://newsapi.org/v2/top-headlines?country=eg&category=entertainment&apiKey=8b37d8a3b30d497fab3c2ba52ad231fa"
+            newsApi.fetchData(url: url)
+            
+        case 2:
+            url = "https://newsapi.org/v2/top-headlines?country=eg&category=health&apiKey=8b37d8a3b30d497fab3c2ba52ad231fa"
+            newsApi.fetchData(url: url)
+        case 3:
+            url = "https://newsapi.org/v2/top-headlines?country=eg&category=science&apiKey=8b37d8a3b30d497fab3c2ba52ad231fa"
+            newsApi.fetchData(url: url)
+            
+        case 4:
+            url = "https://newsapi.org/v2/top-headlines?country=eg&category=sports&apiKey=8b37d8a3b30d497fab3c2ba52ad231fa"
+            newsApi.fetchData(url: url)
+        case 5:
+            url = "https://newsapi.org/v2/top-headlines?country=eg&category=technology&apiKey=8b37d8a3b30d497fab3c2ba52ad231fa"
+            newsApi.fetchData(url: url)
+        default:
+            url = "https://newsapi.org/v2/top-headlines?country=eg&category=business&apiKey=8b37d8a3b30d497fab3c2ba52ad231fa"
+            newsApi.fetchData(url: url)
+        }
     }
 }
+
+  
+
     //MARK: - Extintions
-extension SportsNewsVC : UITableViewDelegate,UITableViewDataSource{
+
+extension NewsVC : UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return postsArray.count
     }
@@ -61,7 +102,7 @@ extension SportsNewsVC : UITableViewDelegate,UITableViewDataSource{
             }else{
                 cell.NewsPoster.loadFrom(URLAddress: postsArray[indexPath.row].urlToImage!)
             }
-       
+         
         return cell
     }
     
@@ -75,24 +116,21 @@ extension SportsNewsVC : UITableViewDelegate,UITableViewDataSource{
      
 }
 
-extension SportsNewsVC : NewsDelegate{
+extension NewsVC : NewsDelegate{
     func didFetchData(posts: News) {
         newsArray=posts.articles
         postsArray.removeAll()
         
-        for i in 0...10{
+        for i in 0...postNum{
             postsArray.append(newsArray[i])
             }
         
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
-       // print(posts.articles[1].url)
     }
 }
-
-
-
+ 
 extension UIImageView  {
     func loadFrom(URLAddress: String) {
         guard let url = URL(string: URLAddress) else {

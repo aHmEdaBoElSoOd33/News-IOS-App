@@ -16,8 +16,8 @@ class NewsApi {
     var delegate : NewsDelegate?
     
     
-    func fetchData(){
-        let url = URL(string: "https://newsapi.org/v2/top-headlines?country=eg&category=sports&apiKey=8b37d8a3b30d497fab3c2ba52ad231fa")
+    func fetchData(url:String){
+        let url = URL(string: url )
         let session = URLSession(configuration: URLSessionConfiguration.default)
         let task = session.dataTask(with: url!) { data, response , error in
              

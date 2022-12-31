@@ -14,14 +14,15 @@
 		E2718938295F59B3001861A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2718937295F59B3001861A0 /* Assets.xcassets */; };
 		E271893B295F59B3001861A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2718939295F59B3001861A0 /* LaunchScreen.storyboard */; };
 		E2718948295F5C68001861A0 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2718947295F5C68001861A0 /* NewsCell.swift */; };
-		E271894A295F5E4E001861A0 /* SportsNewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2718949295F5E4E001861A0 /* SportsNewsVC.swift */; };
+		E271894A295F5E4E001861A0 /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2718949295F5E4E001861A0 /* NewsVC.swift */; };
 		E28E6D04295F617C00248415 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28E6D03295F617C00248415 /* News.swift */; };
 		E28E6D06295F618D00248415 /* NewsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28E6D05295F618D00248415 /* NewsApi.swift */; };
 		E28ED46E29600D7C004C8DD7 /* WebsiteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28ED46D29600D7C004C8DD7 /* WebsiteVC.swift */; };
+		E2D0857F296051A50011B4BE /* CategoriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D0857E296051A50011B4BE /* CategoriesVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E2718928295F59B2001861A0 /* Sports News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sports News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2718928295F59B2001861A0 /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E271892B295F59B2001861A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E271892D295F59B2001861A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E2718932295F59B2001861A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -30,10 +31,11 @@
 		E271893A295F59B3001861A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E271893C295F59B3001861A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2718947295F5C68001861A0 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
-		E2718949295F5E4E001861A0 /* SportsNewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsNewsVC.swift; sourceTree = "<group>"; };
+		E2718949295F5E4E001861A0 /* NewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVC.swift; sourceTree = "<group>"; };
 		E28E6D03295F617C00248415 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		E28E6D05295F618D00248415 /* NewsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsApi.swift; sourceTree = "<group>"; };
 		E28ED46D29600D7C004C8DD7 /* WebsiteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteVC.swift; sourceTree = "<group>"; };
+		E2D0857E296051A50011B4BE /* CategoriesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +52,7 @@
 		E271891F295F59B1001861A0 = {
 			isa = PBXGroup;
 			children = (
-				E271892A295F59B2001861A0 /* Sports News */,
+				E271892A295F59B2001861A0 /* NewsApp */,
 				E2718929295F59B2001861A0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,12 +60,12 @@
 		E2718929295F59B2001861A0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E2718928295F59B2001861A0 /* Sports News.app */,
+				E2718928295F59B2001861A0 /* NewsApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E271892A295F59B2001861A0 /* Sports News */ = {
+		E271892A295F59B2001861A0 /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
 				E2718944295F5BFA001861A0 /* Model */,
@@ -73,7 +75,7 @@
 				E271893C295F59B3001861A0 /* Info.plist */,
 				E2718934295F59B2001861A0 /* Sports_News.xcdatamodeld */,
 			);
-			path = "Sports News";
+			path = NewsApp;
 			sourceTree = "<group>";
 		};
 		E2718944295F5BFA001861A0 /* Model */ = {
@@ -99,7 +101,8 @@
 			children = (
 				E271892B295F59B2001861A0 /* AppDelegate.swift */,
 				E271892D295F59B2001861A0 /* SceneDelegate.swift */,
-				E2718949295F5E4E001861A0 /* SportsNewsVC.swift */,
+				E2D0857E296051A50011B4BE /* CategoriesVC.swift */,
+				E2718949295F5E4E001861A0 /* NewsVC.swift */,
 				E2718947295F5C68001861A0 /* NewsCell.swift */,
 				E28ED46D29600D7C004C8DD7 /* WebsiteVC.swift */,
 			);
@@ -125,9 +128,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E2718927295F59B2001861A0 /* Sports News */ = {
+		E2718927295F59B2001861A0 /* NewsApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E271893F295F59B3001861A0 /* Build configuration list for PBXNativeTarget "Sports News" */;
+			buildConfigurationList = E271893F295F59B3001861A0 /* Build configuration list for PBXNativeTarget "NewsApp" */;
 			buildPhases = (
 				E2718924295F59B2001861A0 /* Sources */,
 				E2718925295F59B2001861A0 /* Frameworks */,
@@ -137,9 +140,9 @@
 			);
 			dependencies = (
 			);
-			name = "Sports News";
+			name = NewsApp;
 			productName = "Sports News";
-			productReference = E2718928295F59B2001861A0 /* Sports News.app */;
+			productReference = E2718928295F59B2001861A0 /* NewsApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -157,7 +160,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E2718923295F59B1001861A0 /* Build configuration list for PBXProject "Sports News" */;
+			buildConfigurationList = E2718923295F59B1001861A0 /* Build configuration list for PBXProject "NewsApp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -170,7 +173,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E2718927295F59B2001861A0 /* Sports News */,
+				E2718927295F59B2001861A0 /* NewsApp */,
 			);
 		};
 /* End PBXProject section */
@@ -194,11 +197,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E28E6D04295F617C00248415 /* News.swift in Sources */,
-				E271894A295F5E4E001861A0 /* SportsNewsVC.swift in Sources */,
+				E271894A295F5E4E001861A0 /* NewsVC.swift in Sources */,
 				E271892C295F59B2001861A0 /* AppDelegate.swift in Sources */,
 				E271892E295F59B2001861A0 /* SceneDelegate.swift in Sources */,
 				E2718936295F59B2001861A0 /* Sports_News.xcdatamodeld in Sources */,
 				E2718948295F5C68001861A0 /* NewsCell.swift in Sources */,
+				E2D0857F296051A50011B4BE /* CategoriesVC.swift in Sources */,
 				E28ED46E29600D7C004C8DD7 /* WebsiteVC.swift in Sources */,
 				E28E6D06295F618D00248415 /* NewsApi.swift in Sources */,
 			);
@@ -349,7 +353,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NU3L58K3P3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Sports News/Info.plist";
+				INFOPLIST_FILE = NewsApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -377,7 +381,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NU3L58K3P3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Sports News/Info.plist";
+				INFOPLIST_FILE = NewsApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -399,7 +403,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E2718923295F59B1001861A0 /* Build configuration list for PBXProject "Sports News" */ = {
+		E2718923295F59B1001861A0 /* Build configuration list for PBXProject "NewsApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E271893D295F59B3001861A0 /* Debug */,
@@ -408,7 +412,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E271893F295F59B3001861A0 /* Build configuration list for PBXNativeTarget "Sports News" */ = {
+		E271893F295F59B3001861A0 /* Build configuration list for PBXNativeTarget "NewsApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E2718940295F59B3001861A0 /* Debug */,
