@@ -25,7 +25,6 @@ class NewsApi {
                 
                 let news : News = try JSONDecoder().decode(News.self, from: data!)
                 self.delegate?.didFetchData(posts: news)
-               // print(news.articles[0].title)
             }catch{
                 print(error)
             }

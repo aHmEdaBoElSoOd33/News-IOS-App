@@ -11,6 +11,7 @@ class NewsCell: UITableViewCell {
 
     //MARK: - IBOutlets
     
+    @IBOutlet weak var cellContent: UIView!
     @IBOutlet weak var NewsTitle: UILabel!
     @IBOutlet weak var NewsPoster: UIImageView!
     

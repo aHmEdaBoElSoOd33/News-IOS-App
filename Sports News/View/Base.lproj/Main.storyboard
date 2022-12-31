@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BiJ-Vt-vNF">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Sports NewsVC-->
+        <!--Sports News-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SportsNewsVC" customModule="Sports_News" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,30 +17,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WY7-8X-Tb1">
-                                <rect key="frame" x="0.0" y="47" width="428" height="845"/>
+                                <rect key="frame" x="0.0" y="91" width="428" height="801"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="200" id="dKP-d8-aeV" customClass="NewsCell" customModule="Sports_News" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="200" id="dKP-d8-aeV" customClass="NewsCell" customModule="Sports_News" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="428" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dKP-d8-aeV" id="aqo-j2-JP4">
                                             <rect key="frame" x="0.0" y="0.0" width="428" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V7t-XY-U9B" userLabel="Viewcell">
-                                                    <rect key="frame" x="10" y="5" width="408" height="190"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V7t-XY-U9B">
+                                                    <rect key="frame" x="20" y="5" width="388" height="190"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="breaking-news-blog-1138x658-1" translatesAutoresizingMaskIntoConstraints="NO" id="BWY-4w-0IR">
-                                                            <rect key="frame" x="0.0" y="0.0" width="408" height="142.66666666666666"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BK" translatesAutoresizingMaskIntoConstraints="NO" id="BWY-4w-0IR">
+                                                            <rect key="frame" x="0.0" y="0.0" width="388" height="142.66666666666666"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eiv-e9-J32">
-                                                            <rect key="frame" x="0.0" y="142.66666666666666" width="408" height="47.333333333333343"/>
+                                                            <rect key="frame" x="0.0" y="142.66666666666666" width="388" height="47.333333333333343"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="eiv-e9-J32" secondAttribute="trailing" id="3Hw-5C-Tx1"/>
                                                         <constraint firstItem="BWY-4w-0IR" firstAttribute="top" secondItem="V7t-XY-U9B" secondAttribute="top" id="6xw-QO-wvd"/>
@@ -56,13 +55,14 @@
                                             <constraints>
                                                 <constraint firstItem="V7t-XY-U9B" firstAttribute="top" secondItem="aqo-j2-JP4" secondAttribute="top" constant="5" id="7mR-Nw-0fM"/>
                                                 <constraint firstAttribute="bottom" secondItem="V7t-XY-U9B" secondAttribute="bottom" constant="5" id="e0a-wu-JLq"/>
-                                                <constraint firstItem="V7t-XY-U9B" firstAttribute="leading" secondItem="aqo-j2-JP4" secondAttribute="leading" constant="10" id="qQB-N1-1Pf"/>
-                                                <constraint firstAttribute="trailing" secondItem="V7t-XY-U9B" secondAttribute="trailing" constant="10" id="vus-XG-ng2"/>
+                                                <constraint firstItem="V7t-XY-U9B" firstAttribute="leading" secondItem="aqo-j2-JP4" secondAttribute="leading" constant="20" id="qQB-N1-1Pf"/>
+                                                <constraint firstAttribute="trailing" secondItem="V7t-XY-U9B" secondAttribute="trailing" constant="20" id="vus-XG-ng2"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="NewsPoster" destination="BWY-4w-0IR" id="hzF-ME-fu7"/>
                                             <outlet property="NewsTitle" destination="eiv-e9-J32" id="xe9-x4-3mZ"/>
+                                            <outlet property="cellContent" destination="V7t-XY-U9B" id="zLZ-18-C3J"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -73,27 +73,100 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="WY7-8X-Tb1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UYQ-pz-paA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WY7-8X-Tb1" secondAttribute="bottom" id="cSr-Xz-nlL"/>
                             <constraint firstItem="WY7-8X-Tb1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wt1-hs-ONI"/>
-                            <constraint firstItem="WY7-8X-Tb1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="xmk-vf-b2H"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WY7-8X-Tb1" secondAttribute="trailing" id="yIU-Du-ucZ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Sports News" id="WR2-Ep-sZb"/>
                     <connections>
                         <outlet property="tableView" destination="WY7-8X-Tb1" id="AF8-ff-KSa"/>
+                        <segue destination="ExK-zJ-YIJ" kind="show" identifier="gotoSite" id="TIR-Yr-gYv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1000.9345794392523" y="4.5356371490280782"/>
+        </scene>
+        <!--Website-->
+        <scene sceneID="0Rr-vg-OqV">
+            <objects>
+                <viewController id="ExK-zJ-YIJ" customClass="WebsiteVC" customModule="Sports_News" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UDL-vM-ree">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XWF-39-aRA">
+                                <rect key="frame" x="0.0" y="91" width="428" height="801"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error 404 - Not Found" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KoA-jh-U8k">
+                                <rect key="frame" x="0.0" y="423" width="428" height="80"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oh5-Yo-eei"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XWF-39-aRA" firstAttribute="top" secondItem="oh5-Yo-eei" secondAttribute="top" id="6ma-lY-P63"/>
+                            <constraint firstItem="KoA-jh-U8k" firstAttribute="centerX" secondItem="UDL-vM-ree" secondAttribute="centerX" id="ANl-Ij-60u"/>
+                            <constraint firstItem="XWF-39-aRA" firstAttribute="leading" secondItem="oh5-Yo-eei" secondAttribute="leading" id="DIc-Ge-vgl"/>
+                            <constraint firstItem="KoA-jh-U8k" firstAttribute="leading" secondItem="oh5-Yo-eei" secondAttribute="leading" id="G3C-FK-61x"/>
+                            <constraint firstItem="oh5-Yo-eei" firstAttribute="trailing" secondItem="KoA-jh-U8k" secondAttribute="trailing" id="Gav-jC-cOH"/>
+                            <constraint firstItem="oh5-Yo-eei" firstAttribute="trailing" secondItem="XWF-39-aRA" secondAttribute="trailing" id="QAv-LM-QTd"/>
+                            <constraint firstItem="oh5-Yo-eei" firstAttribute="bottom" secondItem="XWF-39-aRA" secondAttribute="bottom" id="hbZ-XW-xPk"/>
+                            <constraint firstItem="KoA-jh-U8k" firstAttribute="centerY" secondItem="UDL-vM-ree" secondAttribute="centerY" id="wOO-0m-P78"/>
+                            <constraint firstItem="KoA-jh-U8k" firstAttribute="height" secondItem="XWF-39-aRA" secondAttribute="height" multiplier="0.1" id="zaw-cc-ZD3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Website" id="KZ5-H3-XUM"/>
+                    <connections>
+                        <outlet property="handelLbl" destination="KoA-jh-U8k" id="ZXa-GP-14W"/>
+                        <outlet property="webview" destination="XWF-39-aRA" id="Vvb-O7-ZNw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pCf-FK-l1j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1816.8224299065419" y="4.5356371490280782"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eMW-69-CB7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BiJ-Vt-vNF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XOG-5W-py9">
+                        <rect key="frame" x="0.0" y="47" width="428" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" systemColor="tintColor"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="XFx-4D-0Bx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="veg-QC-qzJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="100.93457943925233" y="4.5356371490280782"/>
         </scene>
     </scenes>
     <resources>
-        <image name="breaking-news-blog-1138x658-1" width="800" height="480"/>
+        <image name="BK" width="800" height="480"/>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
