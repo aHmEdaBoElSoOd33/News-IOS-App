@@ -17,7 +17,7 @@ class NewsVC: UIViewController {
     //MARK: - Variables
     
     var url = ""
-    var postNum = 10
+    var postNum = 9
     var categoryTag : Int?
     var newsArray = [Article(title: "" , url: "", urlToImage: "")]
     var postsArray : [Article] = [Article(title: "", url: "", urlToImage: "")]
